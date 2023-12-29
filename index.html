@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Redirect Page</title>
+  <script>
+    function redirect() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const page = urlParams.get('page');
+      const hi = urlParams.get('hi2');
+
+      if (!hi) {
+        if (page) {
+          window.location.href = page;
+        } else {
+          window.location.href = 'https://the-best-codes.github.io/';
+        }
+      }
+    }
+
+    // Call the redirect function immediately
+    redirect();
+  </script>
+</head>
+
+<body>
+  <p>This page is designed to redirect you to a specific URL based on the 'page' parameter in the URL. If you're seeing
+    this message, it means the redirection hasn't occurred yet.</p>
+  <p>If you intended to be redirected, please ensure that you've included the correct 'page' parameter in the URL. If
+    you're unsure, you can manually proceed to <a
+      href="https://the-best-codes.github.io/">https://the-best-codes.github.io/</a>.</p>
+</body>
+
+</html>
